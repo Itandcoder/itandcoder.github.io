@@ -66,19 +66,23 @@ function selectRow(rowElement) {
 
 
 // Count Display
-
 let totalCalories = 0;
 // Ongoing account
 let countArrayList = JSON.parse(localStorage.getItem('countList'));
-for (i in countArrayList) {
-  let newCalories = parseInt(countArrayList[i].calories);
-  totalCalories += newCalories;
+if (countArrayList == null) {
+  document.getElementById('remain-count').innerHTML = "0";
 }
-document.getElementById('ongoing-count').innerHTML = totalCalories;
+else {
+  for (i in countArrayList) {
+    let newCalories = parseInt(countArrayList[i].calories);
+    totalCalories += newCalories;
+  }
+  document.getElementById('ongoing-count').innerHTML = totalCalories;  
 
-let dailyCalories = JSON.parse(localStorage.getItem('dailyCalories'));
-let remainCalories = parseInt(dailyCalories) - totalCalories;
-document.getElementById('remain-count').innerHTML = remainCalories;
+  let dailyCalories = JSON.parse(localStorage.getItem('dailyCalories'));
+  let remainCalories = parseInt(dailyCalories) - totalCalories;
+  document.getElementById('remain-count').innerHTML = remainCalories;
+}
 
 
 getCountList();
