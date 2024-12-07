@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/nav.css">
+    <link rel="stylesheet" href="../style/intake.css">
+    <link rel="manifest" href="../manifest.json"/>
+    <meta name="theme-color" content="#000000"/>
+    <title>High Performance</title>
+</head>
+
+<body>
+<!-- Navigation -->
+    <nav>
+    <ul class="menu">
+        <div class="toggle">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="intake.html" class="selected">Intake</a></li>
+            <li><a href="burn.html">Burn</a></li>
+            <li><a href="status.html">Status</a></li>
+        </div>
+    </ul>
+    <button id="menu-btn" onclick="menu()"><img id="hamburger-img" src="../assets/hamburgerIcon.jpg"></button>
+    </nav>
+
+<!-- Website -->
+    <h1>Intake</h1>
+
+    <main>
+        <form id="food-form" onsubmit="addFood(this)">
+            <div id="entry-frame">
+                <input type="text" id="food" name="food" placeholder="Food and portion" required>
+                <input type="number" id="calories" name="calories" placeholder="Cal." required>
+            </div>
+            <div id="buttons-frame">
+                <input type="submit" id="save" class="form-buttons" value="Save">
+                <input type="button" id="del" class="form-buttons" value="Del" onclick="deleteFood()">
+                <input type="button" id="clear" class="form-buttons" value="Clear" onclick="clearSelection()">
+                <input type="button" id="get" class="form-buttons" value="Get" onclick="getFood()">
+            </div>
+        </form>
+    <div id="table-frame">
+        <table>
+            <thead>
+                <th id="food-heading">Food</th>
+                <th id="calories-heading">Cal.</th>
+            </thead>
+            <tbody id="food-table">
+
+            </tbody>
+        </table>
+    </div>
+    </main>
+
+    <script src="../logic/nav.js"></script>
+    <script src="../logic/intake.js"></script>
+</body>
+
+</html>

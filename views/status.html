@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/nav.css">
+    <link rel="stylesheet" href="../style/status.css">
+    <link rel="manifest" href="../manifest.json"/>
+    <meta name="theme-color" content="#000000"/>
+    <title>High Performance</title>
+</head>
+
+<body>
+<!-- Navigation -->
+    <nav>
+    <ul class="menu">
+        <div class="toggle">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="intake.html">Intake</a></li>
+            <li><a href="burn.html">Burn</a></li>
+            <li><a href="status.html" class="selected">Status</a></li>
+        </div>
+    </ul>
+    <button id="menu-btn" onclick="menu()"><img id="hamburger-img" src="../assets/hamburgerIcon.jpg"></button>
+    </nav>
+    
+    <h1>Status</h1>
+
+    <main>
+        
+        <div id="buttons-frame">
+            <input type="button" id="reset" class="form-buttons" value="Reset" onclick="reset()">
+            <input type="button" id="clear" class="form-buttons" value="Clear" onclick="clearSelection()">
+            <input type="button" id="remove" class="form-buttons" value="Remove" onclick="removeFood()">
+        </div>
+        <div id="table-frame">
+        <table>
+            <thead>
+                <th id="food-heading">Food</th>
+                <th id="calories-heading">Cal.</th>
+            </thead>
+            <tbody id="food-table">
+
+            </tbody>
+        </table>
+        </div>
+
+        <section id="ongoing">
+            <div>
+                <h2 class="ongoing-labels">Count</h2>
+                <p id="ongoing-count">0</p>
+            </div>
+            <div>
+                <h2 class="ongoing-labels">Remain</h2>
+                <p id="remain-count">0</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../logic/nav.js"></script>
+    <script src="../logic/status.js"></script>
+</body>
+
+</html>

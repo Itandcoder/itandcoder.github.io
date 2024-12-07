@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/nav.css">
+    <link rel="stylesheet" href="../style/burn.css">
+    <link rel="manifest" href="../manifest.json"/>
+    <meta name="theme-color" content="#000000"/>
+    <title>High Performance</title>
+</head>
+
+<body>
+<!-- Navigation -->
+    <nav>
+    <ul class="menu">
+        <div class="toggle">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="intake.html">Intake</a></li>
+            <li><a href="burn.html" class="selected">Burn</a></li>
+            <li><a href="status.html">Status</a></li>
+        </div>
+    </ul>
+    <button id="menu-btn" onclick="menu()"><img id="hamburger-img" src="../assets/hamburgerIcon.jpg"></button>
+    </nav>
+    
+    <h1>Burn</h1>
+
+    <main>
+        <h2>Calories Calculator</h2>
+        <div>
+          <form id="calories-form" onsubmit="caloriesCalc(this);">
+            <select id="gender">
+              <option value="400">Male</option>
+              <option value="100">Female</option>
+              <option value="350">Breastfeeding partially</option>
+              <option value="600">Solely nursing</option>
+            </select>
+            <select id="age">
+              <option value="200">Age 17 - 26</option>
+              <option value="150">Age 27 - 37</option>
+              <option value="100">Age 38 - 47</option>
+              <option value="50">Age 48 - 58</option>
+              <option value="0">Age 59 and up</option>
+            </select>
+            <select id="height">
+              <option value="0">Height up to 5'0"</option>
+              <option value="50">5'1" to 5'10"</option>
+              <option value="100">5'11" and up</option>
+            </select>
+            <select id="activity">
+              <option value="0">Mostly sitting</option>
+              <option value="100">Mostly standing</option>
+              <option value="200">Mostly walking</option>
+              <option value="300">Hard physical labor</option>
+            </select>
+            <h3>Weight in pounds</h3>
+            <input id="weightDigits" type="number" min="100" required>
+            <h3>*Optional Training or Event Calories</h3>
+            <input id="performanceCal" type="number" value="0" required>
+            <input id="submitButton" type="submit" value="Calc">
+
+          </form>
+          <div>
+            <p id="daily-calories"></p>
+          </div>
+        </div>
+    </main>
+
+    <script src="../logic/nav.js"></script>
+    <script src="../logic/burn.js"></script>
+</body>
+
+</html>
