@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json"/>
+    <meta name="theme-color" content="#000000"/>
+    <title>High Performance</title>
+</head>
+
+<body>
+<!-- Navigation -->
+    <nav>
+    <ul class="menu">
+        <div class="toggle">
+            <li><a href="index.html" class="selected">Home</a></li>
+            <li><a href="./views/intake.html">Intake</a></li>
+            <li><a href="./views/burn.html">Burn</a></li>
+            <li><a href="./views/status.html">Status</a></li>
+        </div>
+    </ul>
+    <button id="menu-btn" onclick="menu()"><img id="hamburger-img" src="./assets/hamburgerIcon.jpg"></button>
+    </nav>
+    
+<!-- Main Page -->    
+    <h1>Home</h1>
+
+    <main id="intro">
+        <h2>Welcome to HiPer App</h2>
+        <h3>(Hight Performance)</h3>
+        <p>Keep calories in balance. You can calculate the calories necessary based on fisical activity changes.</p>
+        <p>Both, to lose weigth and to keep enegergy up.</p>
+        <p>It is very important to get the required calories for high energy and muscle mass while not exceeding to keep body fit or lose weight.</p>
+        <p>This is the main goal of this App</p>
+        <p>Good luck!</p>
+    </main>
+
+    <script src="./logic/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
